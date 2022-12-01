@@ -1,0 +1,73 @@
+  <div class="wrapper">
+    
+    <div class="sidebar">
+   
+        <ul style="list-style:none;">
+          <li>
+           <p style="font-size:larger;">
+                  
+                  <span class="item"><b>Hello {{custName}}</b></span>
+              </p>
+          </li>
+          <li>
+              <p >
+                <i class="fa fa-user" aria-hidden="true"></i>&nbsp;
+                  <span class="item"><b>My Dashboard</b></span>
+              </p>
+          </li>
+          <li>
+          <a > <button (click)="onPress(1)" id="btn"><span class="item">Search</span></button></a>
+        </li>
+      
+        <li>
+          <a > <button (click)="onPress(2)" id="btn"><span class="item">My Bookings</span></button></a>
+        </li>
+        <li>
+          <a > <button  (click)="onPress(3)" id="btn"><span class="item">My Profile</span></button></a>
+        </li>
+        <li>
+          <a > <button (click)="onPress(4)" id="btn"><span class="item">Change Password</span></button></a>
+        </li>
+        <li>
+          <a > <button (click)="onPress(5)" id="btn"><span class="item">Wallet</span></button></a>
+        </li>
+<li>
+        <a routerLink="/clogin">LogOut</a>
+      </li>
+          <!-- <li>
+            <a href="#">
+                
+                <span class="item">Bookings</span>
+            </a>
+        </li>
+          <li>
+              <a href="#">
+                  
+                  <span class="item">Profile</span>
+              </a>
+          </li>
+          <li>
+              <a href="#">
+                  
+                  <span class="item">Change Password</span>
+              </a>
+          </li>
+          <li>
+            <a href="#">
+                
+                <span class="item">Wallet</span>
+            </a>
+        </li>            
+         -->
+      </ul>
+  </div>
+    </div>
+    <div class="container">
+      <div id="comp-render" >
+        <app-searchbus *ngIf="tabIndex===1"></app-searchbus>
+        <app-bookings *ngIf="tabIndex===2"></app-bookings>
+        <app-changepassword *ngIf="tabIndex===4"></app-changepassword>
+        <app-profile *ngIf="tabIndex===3"></app-profile>
+        <app-wallet *ngIf="tabIndex===5"></app-wallet>
+    </div>
+    

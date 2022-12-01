@@ -1,0 +1,65 @@
+
+<h2 style="color:orangered;text-align: center;margin-top: 15px;" >Add Passenger Details</h2>
+<hr/><br>
+<div style="margin-left:500px;margin-right: 500px;" >
+<form (ngSubmit)="show(passdetails)" #passform="ngForm">
+
+    <b class="lst"style="color:white">Seat {{seat_arr[cnt]}}</b><br><br>
+    <div  class="passenger" style="border:2px solid black; padding: 10px 15px;">
+    <div class="form-group mb-3">
+    <label for="pid">Enter Passenger Id :</label>
+    <input class="form-control" type="number" placeholder="Enter Passenger ID" name="PId" id="PId" required [(ngModel)]="passdetails.pId" #PId="ngModel">
+    <div *ngIf="PId.invalid && (PId.dirty || PId.touched)" style="color:red;">    
+        <div *ngIf="PId.errors?.['required']">
+            PId is required
+        </div>
+    </div>
+</div>
+<div class="form-group mb-3">
+    <label for="pname">Enter Passenger Name :</label>
+    <input type="text" class="form-control" placeholder="Enter Passenger Name" name="PName" id="PName" required [(ngModel)]="passdetails.pName" #PName="ngModel">
+    <div *ngIf="PName.invalid && (PName.dirty || PName.touched)" style="color:red;">    
+        <div *ngIf="PName.errors?.['required']">
+            Passenger Name is required
+        </div>
+    </div></div>
+    <div class="form-group mb-3">
+    <label for="age">Enter Age :</label>
+    <input type="number" class="form-control" placeholder="Enter Passenger Age" name="Age" id="Age" required [(ngModel)]="passdetails.age" #Age="ngModel">
+    <div *ngIf="Age.invalid && (Age.dirty || Age.touched)" style="color:red;">    
+        <div *ngIf="Age.errors?.['required']">
+            Age is required
+        </div>
+    </div>
+</div>
+<div class="form-group mb-3">
+    <label for="Adhaar">Enter Aadhaar no :</label>
+    <input type="text" class="form-control" placeholder="Enter Passenger Adhaar" name="Adhaar" id="Adhaar" required minlength="12" maxlength="12" [(ngModel)]="passdetails.adhaar" #Adhaar="ngModel">
+    <div *ngIf="Adhaar.invalid && (Adhaar.dirty || Adhaar.touched)" style="color:red;">    
+        <div *ngIf="Adhaar.errors?.['required']">
+            Adhaar is required
+        </div>
+        <div *ngIf="Adhaar.errors?.['minlength']">
+            Adhaar must be 12 digits
+        </div>
+
+    </div>
+</div>
+<div class="form-group mb-3">
+    <label for="Gender">Enter Gender(M/F):</label>
+    <input type="text" class="form-control" placeholder="Enter Passenger Gender" name="Gender" id="Gender" required [(ngModel)]="passdetails.gender" #Gender="ngModel">
+    <div *ngIf="Gender.invalid && (Gender.dirty || Gender.touched)" style="color:red;">    
+        <div *ngIf="Gender.errors?.['required']">
+            Gender is required
+        </div>
+    </div></div>
+    
+    <input type="submit" value="Submit" class="btn btn-success" [disabled]="!passform.valid">&nbsp;&nbsp;&nbsp;
+  
+    <input type="reset" value="Clear" class="btn btn-secondary">
+</div>
+</form>
+</div>
+
+
+

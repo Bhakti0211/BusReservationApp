@@ -1,0 +1,241 @@
+<div id="print-section" class="main">
+  <h2 class="heading">Ticket Summary</h2>
+
+  <div class="header">
+    <div class="customer">
+      <div class="card mt-5 border-5 pt-2 active pb-0 px-3">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="card-title">
+                <b>Hello, {{ custFirstName }} {{ custLastName }}</b>
+              </h4>
+            </div>
+            <div class="col">
+              <h6 class="card-subtitle mb-2 text-muted">
+                <p class="card-text text-muted small">
+                  <img
+                    src="https://img.icons8.com/metro/26/000000/star.png"
+                    class="mr-1"
+                    width="19"
+                    height="19"
+                    id="star"
+                  />
+                  <span class="vl mr-2 ml-0"></span>
+
+                  Your Email Id:
+                  <span class="font-weight-bold">{{ email }}</span>
+                </p>
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer bg-white px-0">
+          <div class="row">
+            <div class="col-md-auto">
+              <span>Your Contact Details:</span
+              ><span class="font-weight-bold">{{ customerContact }}</span>
+              <i class="mdi mdi-settings-outline"></i>
+            </div>
+
+            <div class="col-md-auto">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <img
+                    src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1573035860/Pra/Hadie-profile-pic-circle-1.png"
+                    alt="DP"
+                    class="rounded-circle img-fluid"
+                    width="35"
+                    height="35"
+                  />
+                </li>
+                <li class="list-inline-item">
+                  <img
+                    src="https://img.icons8.com/ios/50/000000/plus.png"
+                    width="30"
+                    height="30 "
+                    class="more"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <h3>{{custFirstName}} {{custLastName}}</h3>
+            <h3>{{customerContact}}</h3>
+            <h3>{{email}}</h3>  -->
+    </div>
+    <div class="passengerdetails">
+      <article class="card fl-left cd">
+        <section class="date">
+          <time datetime="23th feb">
+            <span>{{ dTime }}</span>
+          </time>
+        </section>
+        <section class="card-cont">
+          <b>
+            <small
+              style="
+                color: white;
+                background-color: purple;
+                padding: 4px;
+                border-radius: 4px;
+              "
+              >Ticket Details</small
+            ></b
+          >
+          <hr />
+          <h3 style="color: black">Passenger Details</h3>
+          <hr />
+          <div class="even-date">
+            <span>Traveller</span>&nbsp;&nbsp;&nbsp;
+            <time *ngFor="let pass of passengers">
+              <span style="color: black"
+                >||{{ pass.pName }} {{ pass.gender }} {{ pass.adhaar }}
+                {{ pass.age }}||</span
+              >
+            </time>
+            <br />
+            <br />
+            <span>Total Seats Booked:</span> {{ seatCount }}
+          </div>
+          <div class="even-info">
+            <i class="fa fa-map-marker"></i>
+            <p style="font: weight 600px; color: black">
+              Seat Numbers : [{{ seats }}]
+            </p>
+          </div>
+          <a href="#" style="background-color:purple">tickets</a>
+        </section>
+      </article>
+      <!-- <h4>Total Seats Booked : {{seatCount}}</h4>
+            <h4>Seat Numbers : [{{seats}}]</h4>   
+            <h5 *ngFor="let pass of passengers">
+                <span>{{pass.pName}} {{pass.gender}} {{pass.adhaar}} {{pass.age}}</span>
+                <br>
+            </h5> -->
+    </div>
+  </div>
+  <div class="mid">
+    <div class="busdetails">
+      <h2 class="midhead">Bus Details</h2>
+      <table class="table">
+        <thead class="head">
+          <tr>
+            <th>BusId</th>
+            <th>BusNo</th>
+            <th>Type Of Bus</th>
+            <th>Driver Name</th>
+            <th>Driver Contact</th>
+            <th>source</th>
+            <th>Destination</th>
+            <th>Departure</th>
+            <th>Arrivals</th>
+            <th>Destination</th>
+            <th>Pick up</th>
+            <th>Distance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ busId }}</td>
+            <td>{{ busNo }}</td>
+            <td>{{ typeOfBus }}</td>
+            <td>{{ driverName }}</td>
+            <td>{{ driverContact }}</td>
+            <td>{{ source }}</td>
+            <td>{{ destination }}</td>
+            <td>{{ dTime }}</td>
+            <td>{{ aTime }}</td>
+            <td>{{ destination }}</td>
+            <td>{{ pickup }}</td>
+            <td>{{ distance }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <h4>{{busId}}</h4>
+
+<h4>Source : {{source}}</h4>
+<h4>Destination : {{destination}}</h4>
+<h4>Departure Time : {{dTime}}</h4>
+<h4>Arrival Time : {{aTime}}</h4>
+<h4>Bus No : {{busNo}}</h4>
+<h4>Driver Name : {{driverName}}</h4>
+<h4>Driver Contact : {{driverContact}}</h4>
+<h4>Pickup : {{pickup}}</h4>
+<h4>Type of Bus : {{typeOfBus}}</h4>
+<h4>Total Distance : {{distance}}</h4> -->
+    </div>
+  </div>
+  <div class="cardcost">
+   <br>
+    <p class="det">
+       <br> Card Number : {{ cardNumber }}</p>
+    <br>
+    <hr/>
+    <br>
+    <p  class="det"  >
+        <br>Total Cost of the Seats Booked : {{ totalCost }}</p>
+
+   
+</div>
+<br><br>
+<!--<a routerLink="/feedback"><button class="btn btn-info feed">Feedback</button></a>&nbsp;&nbsp;
+<br><br>-->
+<div class="footer">
+    <h3 class="thank">THANK YOU FOR BOOKING!</h3>
+    <a routerLink="/feedback"><button class="btn btn-info feed">Feedback</button></a>
+    <button printSectionId="print-section" ngxPrint  class="Print" >Print</button> 
+</div>
+</div>
+
+<!-- <h1>Summary</h1>
+
+
+<h3>{{custFirstName}} {{custLastName}}</h3>
+<h3>{{customerContact}}</h3>
+<h3>{{email}}</h3>
+
+
+
+
+<h4>{{busId}}</h4>
+
+<h4>Source : {{source}}</h4>
+<h4>Destination : {{destination}}</h4>
+<h4>Departure Time : {{dTime}}</h4>
+<h4>Arrival Time : {{aTime}}</h4>
+<h4>Bus No : {{busNo}}</h4>
+<h4>Driver Name : {{driverName}}</h4>
+<h4>Driver Contact : {{driverContact}}</h4>
+<h4>Pickup : {{pickup}}</h4>
+<h4>Type of Bus : {{typeOfBus}}</h4>
+<h4>Total Distance : {{distance}}</h4>
+<br>
+<br>
+
+<h4>Total Seats Booked : {{seatCount}}</h4>
+<h4>Seat Numbers : [{{seats}}]</h4>
+
+<br>
+<br>
+
+<h5 *ngFor="let pass of passengers">
+    <span>{{pass.pName}} {{pass.gender}} {{pass.adhaar}} {{pass.age}}</span>
+    <br>
+</h5>
+
+<br>
+
+
+<h5>Card Number : {{cardNumber}}</h5>
+<h5>Total Cost of the Seats Booked : {{totalCost}}</h5>
+
+
+
+
+
+
+ -->

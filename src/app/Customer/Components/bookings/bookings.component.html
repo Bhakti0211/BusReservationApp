@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="jumbotron">
+        <table class="table">
+            <thead class="head">
+                <tr>
+                <th>Transaction Id</th>
+                <th>Bus Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Date Of Departure</th>
+                <th>Date Of Booking</th>
+                <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of transactiondata">
+                    <td>{{data.tId}}</td>
+                    <td>{{data.busNo}}</td>
+                    <td>{{data.source}}</td>
+                    <td>{{data.destination}}</td>
+                    <td>{{data.dateOfDeparture|date:'short'}}</td>
+                    <td>{{data.dateOfBooking|date:'short'}}</td>
+                    <td>{{data.totalCost}}</td>
+                    
+                    <td>
+                        <div class="btns">
+                    <div class="but1" *ngIf="data.dateOfDeparture>today; else elseBlock">
+                        <button [routerLink]="['/bookingcancel/',data.tId]" class="btn btn-danger" >Cancel</button>&nbsp;&nbsp;
+                     </div> 
+                     
+                      <ng-template #elseBlock>
+                  
+                        <a routerLink="/feedback"><button class="btn btn-info">Feedback</button></a>&nbsp;&nbsp;
+                      </ng-template>
+                      <a [routerLink]="['/passbook/',data.tId]"><button class="btn btn-info">Show More</button></a>
+                    </div>
+                    </td> 
+                   
+                </tr>
+                <!-- <tr *ngFor="let pas of transactiondata.passengers">
+                    <td>{{pas.pname}}</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>

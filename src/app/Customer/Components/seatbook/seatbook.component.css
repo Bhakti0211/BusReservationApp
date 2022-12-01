@@ -1,0 +1,121 @@
+table, th, td {
+    
+    margin-left: 5rem;
+    margin-top: 50px;
+  
+  }
+table{
+    border-collapse: separate;
+    border: none;
+    display: table;
+    border-spacing: 1rem;
+}
+
+th {
+    background-color:burlywood;
+    
+    width: 80px;
+    height: 50px;
+}
+tbody{
+    margin-top:50px;
+}
+
+td {
+    text-align: center;
+    width: 40px;
+    height: 45px;
+    border-radius: 7px;
+}
+
+
+#available {
+    background-color:#46be8a;
+    cursor: pointer;
+    color: White;
+    font-weight: 400;
+}
+#available:hover {
+    background-color:black;
+    transition: 0.3s ease;
+}
+
+#notavb {
+    background-color:gray;
+}
+
+#selected {
+    color: white;
+    font-weight: bold;
+    background-color:darkslateblue;
+    cursor: pointer;
+}
+ 
+
+
+
+.confirm{
+   
+    background-color:deepskyblue;
+    margin-left: 26rem;
+    
+    border: none;
+    padding: 13px 30px 12px 29px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.confirm:hover{
+    background-color:black;
+    color: white;
+    transition: 0.3s ease;
+}
+.selectedseat{
+  
+    border: none;
+    padding: 10px;
+    border-radius: 5rem;
+    background-color: rgb(231, 173, 13);
+    cursor:default;
+}
+.seatbtn{
+    padding: 3px;
+ 
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.next{
+    background-color:rgb(231, 173, 13);
+    margin-right: 20rem;
+    margin-bottom: 2rem;
+    border: none;
+    padding: 13px 30px 12px 29px;
+    border-radius: 10px;
+}
+.next:hover{
+
+    color: white;
+    background-color: coral;
+    transition: 0.3s ease;
+
+}
+.btndiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.s{
+    display: flex;
+    align-items: center;
+   overflow: auto;
+}
+
+.heading{
+    text-align: center;
+    font-family: 'FontAwesome';
+}
+

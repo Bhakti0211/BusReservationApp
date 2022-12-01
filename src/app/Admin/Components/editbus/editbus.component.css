@@ -1,0 +1,10 @@
+.table {
+    background-color: rgba(128, 128, 128, 0.267);
+    font-size: 12px;
+}
+.head {
+    background-color: rgba(6, 77, 134, 0.438);
+}
+.tr {
+    padding: 1px;
+}

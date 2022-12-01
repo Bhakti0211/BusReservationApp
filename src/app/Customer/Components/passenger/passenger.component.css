@@ -1,0 +1,30 @@
+.table{
+    background-color: rgba(72, 194, 203, 0.267);
+    font-size: 17px;
+}
+.head{
+    background-color: rgba(9, 139, 245, 0.438);
+}
+.tr{
+    padding: 1px;
+}
+
+.lst{
+    border: 2px  white;
+    padding: 11px 24px;
+
+    border-radius: 10px;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: orangered;
+}
+
+.passenger{
+    border-radius: 2rem;
+    /* background: linear-gradient(45deg, rgb(0, 225, 255), rgb(212, 0, 255)); */
+}
+
+
+

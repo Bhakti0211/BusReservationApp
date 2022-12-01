@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="jumbotron">
+        <table class="table">
+            <thead class="head">
+                <tr>
+                <th>Traveller Identity</th>
+                <th>Traveller Name</th>
+                <th>Adhaar Details</th>
+                <th>Age</th>
+                <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of passdata">
+                    <td>{{data.pid}}</td>
+                    <td>{{data.pname}}</td>
+                    <td>{{data.adhaar}}</td>
+                    <td>{{data.age}}</td>
+                    <td>{{data.gender}}</td>
+                  
+            </tbody>
+            <a [routerLink]="['/sidebarcust']"><button class="btn btn-info">Go Back</button></a>

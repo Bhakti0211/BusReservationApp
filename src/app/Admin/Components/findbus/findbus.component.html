@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="text-success" style="margin-left:500px;margin-top:70px;text-decoration:underline;">BUS {{busdata.busNo}} INFO</h2>
+        <table class="table" style="margin-top:80px;margin-left:3px">
+            <thead class="head">
+                <tr>
+                    <th>BusNo</th>
+                    <th>Bus type</th>
+                    <th>Driver Name</th>
+                    <th>Driver Contact</th>
+                    <!-- <th>Rows</th>
+                    <th>Cols</th> -->
+                    <th>Total Seats</th>
+                    <th>Seats Available</th> 
+                    <th>Departure Time</th>   
+                    <th>Arrival time</th>
+                    <th>Pick up</th>
+                    <th>Seat Cost</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Distance</th> 
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                    <td>{{busdata.busNo}}</td>
+                    <td>{{busdata.typeOfBus}}</td>
+                    <td>{{busdata.driverName}}</td>
+                    <td>{{busdata.driverContact}}</td>
+                    <!-- <td>{{busdata.rows}}</td>
+                    <td>{{busdata.cols}}</td> -->
+                    <td>{{busdata.rows*busdata.cols}}</td>
+                    <td>{{seatAvb}}</td>
+                    <td>{{busdata.dTime}}</td>
+                    <td>{{busdata.aTime}}</td>
+                    <td>{{busdata.pickup}}</td>
+                    <td>{{busdata.seatCost}}</td>
+                    <td>{{busdata.source}}</td>
+                    <td>{{busdata.destination}}</td>
+                    <td>{{busdata.distance}}</td>
+                </tr>
+            </tbody>
+        </table>  
+    </div>
+    <button type="button" class="btn btn-info" routerLink="/nav" style="margin-left:550px;margin-top: 70px;">
+        Back to List
+     </button>
+</div>
+
+

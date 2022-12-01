@@ -1,0 +1,241 @@
+
+.heading{
+    margin-top: 1px;
+    color: black;
+    background-color:lightsteelblue;
+    text-align: center;
+    border: 1px solid blueviolet;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customer{
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+#star {
+    margin-left: -5px !important;
+    vertical-align: bottom !important;
+    opacity: 0.5;
+}
+
+
+.more {
+    opacity: 0.5 !important;
+}
+
+.vl {
+    margin: 8px !important;
+    width: 2px;
+    border-right: 1px solid #aaaaaa;
+    height: 25px;
+}
+
+
+#plus {
+    opacity: 0.8;
+}
+
+
+.card {
+    border-radius: 10px !important;
+}
+img {
+
+    cursor: pointer;
+    overflow: visible;
+}
+.col-md-auto{
+    font-family: 'FontAwesome';
+    font-weight: 600;
+}
+
+.passengerdetails{
+    margin-right: 4rem;
+    margin-top: 2rem;
+}
+.cd {
+    display: table-row;
+    width: 60%;
+    background-color: #fff;
+    color: #989898;
+    margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    border-radius: 4px;
+    position: relative;
+    /*border: 2px solid gray;*/
+    border-right: 2px dashed #dadde6;
+    
+} 
+
+
+
+.date {
+    display: table-cell;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    /*border-right: 2px dashed #dadde6*/
+}
+
+.date:before,
+.date:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #DADDE6;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: 1;
+    border-radius: 50%
+}
+
+.date:after {
+    top: auto;
+    bottom: -15px
+}
+
+.date time {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.date time span {
+    display: block
+}
+
+.date time span:first-child {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 85%;
+    font-family: monospace;
+    padding: 9px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    background-color:purple;
+}
+
+.date time span:last-child {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: -10px
+}
+
+.card-cont {
+    display: table-cell;
+    width: 75%;
+    font-size: 85%;
+    padding: 10px 10px 30px 50px;
+    border: dashed;
+    border-left: none;
+}
+.card-cont a {
+    display: block;
+    text-decoration: none;
+    width: 80px;
+    height: 30px;
+    background-color:rgb(238, 167, 13);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px
+}
+.card-cont>div {
+    display: table-row
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i,
+.card-cont .even-date time,
+.card-cont .even-info p {
+    display: table-cell
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i {
+    padding: 5% 5% 0 0
+}
+
+.card-cont .even-info p {
+    padding: 30px 50px 0 0
+}
+
+.card-cont .even-date time span {
+    display: block
+}
+.busdetails{
+    margin: 5rem 5rem;
+}
+
+.footer{
+    float: left;
+}
+.table{
+    background-color: rgba(128, 128, 128, 0.267);
+    font-size: 12px;
+}
+.head{
+    background-color: rgba(6, 77, 134, 0.438);
+}
+.tr{
+    padding: 1px;
+}
+.midhead{
+    border: 1px solid blueviolet;
+    color:black;
+    background: lightsteelblue;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cardcost{
+    background-color: rgba(128, 128, 128, 0.123);
+    border:1px dashed;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 17rem;
+    text-align: center;
+}
+.thank{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+   margin-left:550px;
+   margin-right: 27rem;
+}
+
+.feed{
+    margin-left: 39rem;
+}
+.Print{
+    background: #000;
+    color: white;
+    padding:7px;
+    border-radius: 8px;
+    margin-left: 11rem;
+}
+.det{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 7px;
+}
+/* .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+

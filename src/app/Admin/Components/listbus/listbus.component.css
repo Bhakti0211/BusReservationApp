@@ -1,0 +1,23 @@
+.table{
+    /*background-color: rgba(98, 39, 110, 0.267);*/
+    background-color:lightsteelblue;
+    font-size: 17px;
+    margin-left:30px;
+}
+.head{
+    /*background-color: rgba(6, 77, 134, 0.438);*/
+    background-color:rgba(98, 39, 110, 0.267)
+}
+.tr{
+    padding: 1px;
+}
+
+.lst{
+    border: 2px  blueviolet;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    background-color:deepskyblue; 
+}
+

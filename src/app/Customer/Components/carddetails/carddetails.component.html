@@ -1,0 +1,49 @@
+<br><br>
+<h2 style="color:orangered;text-align: center;" >Enter Card Details</h2><br>
+<div style="margin-left:500px;margin-top: 5px;margin-right: 500px;">
+<form (ngSubmit)="Show(carddetails)" #passform="ngForm">
+
+    <!-- <b class="lst"style="color:white">Seat {{seat_arr[cnt]}}</b><br><br> -->
+    <div style="border:2px solid black; padding: 10px 15px;">
+
+        <label for="cardNumber">Enter Unique Transaction Id:</label>
+    <input type="number" placeholder="Enter TID" name="tId" class="form-control" required id="tId" [(ngModel)]="tId">
+    
+
+    <label for="cardNumber">Enter Card no :</label>
+    <input type="text" placeholder="Enter card no" name="cardNumber"class="form-control" id="cardNumber" required minlength="16" maxlength="16" [(ngModel)]="carddetails.cardNumber" #cardNumber="ngModel">
+    <div *ngIf="cardNumber.invalid && (cardNumber.dirty || cardNumber.touched)" style="color:red;">    
+        <div *ngIf="cardNumber.errors?.['required']">
+            Card Number is required
+        </div>
+        <div *ngIf="cardNumber.errors?.['minlength']">
+            Enter 16 digit Card Number
+        </div>
+    </div>
+    <br><br>
+    
+    <label for="cvv">Enter CVV :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter CVV" name="cvv" class="form-control" id="cvv" required minlength="3" maxlength="3" [(ngModel)]="carddetails.cvv" #cvv="ngModel">
+    <div *ngIf="cvv.invalid && (cvv.dirty || cvv.touched)" style="color:red;">    
+        <div *ngIf="cvv.errors?.['required']">
+            CVV is required
+        </div>
+        <div *ngIf="cvv.errors?.['minlength']">
+            Enter 3 digit CVV
+        </div>
+    </div><br><br>
+    <label for="expiry">Enter Expiry date :</label>
+    <input type="date" name="expiry" id="expiry" class="form-control" required [(ngModel)]="carddetails.expiry" #expiry="ngModel">
+    <div *ngIf="expiry.invalid && (expiry.dirty || expiry.touched)" style="color:red;">    
+        <div *ngIf="expiry.errors?.['required']">
+            Expiry date is required
+        </div>
+    </div><br><br>
+    
+    <br>
+    <input style="text-align: center;" type="submit" value="Pay ₹{{totcost}}" class="btn btn-success" [disabled]="!passform">&nbsp;&nbsp;&nbsp;
+    <input value="Cancel" class="btn btn-danger" style="width:6rem;" routerLink="/passdetails">&nbsp;&nbsp;&nbsp;
+</div>
+</form>
+</div>
+

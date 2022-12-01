@@ -1,0 +1,33 @@
+.main{
+    width: 50%;
+    margin-left: 21rem; 
+    padding: 15px 20px;
+}
+
+.btn{
+    border: none;
+    padding: 6px 6px;
+    border-radius: 1rem;
+    background-color: rgba(128, 128, 128, 0.486);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+.btn:hover{
+    background-color: blueviolet;
+    transition: 0.3s ease-in;
+    color: white;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.txt{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+#txt1{
+    color: rgb(6, 110, 6);
+}

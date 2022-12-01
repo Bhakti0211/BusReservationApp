@@ -1,0 +1,82 @@
+<br/><br/>
+<div class="container" style="padding-top:60px;">  
+  <div class="row">  
+    <div class="col-md-6 mx-auto">  
+      <div class="card-group">  
+        <div class="card p-4">  
+          <div class="card-body">  
+            <form name="form" (ngSubmit)="onSubmit()" #f="ngForm">   
+              <h1 style="text-align:center;">Find Buses</h1>  
+               
+                <div class="input-group mb-3">    
+                    <input type="text" name="source" [(ngModel)]="searchquery.source" class="form-control sty1" placeholder="Source" #source="ngModel" required> 
+                </div>
+                
+                <div class="input-group mb-3">
+                <input type="text" name="destination" [(ngModel)]="searchquery.destination" class="form-control sty1" placeholder="Destination" #destination="ngModel" required> 
+                </div>
+
+                <div class="input-group mb-4 mt-2">   
+                    <div style="padding-top: 5px; padding-right:1rem">
+                      Date of Journey
+                    </div>
+                    <br>
+                    <input  type="date" name="dDate" [(ngModel)]="searchquery.dDate"class="form-control" #dDate="ngModel" required>  
+                </div>  
+            
+                <div class="row">  
+                    <div class="col-6">  
+                    <button type="submit" (click)="toggleshow()" class="btn btn-success px-4">Find Buses</button>  
+                    </div>   
+                </div>  
+                
+            </form>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+  <br/>
+ <div *ngIf="btn">
+ <button type="button" class="btn btn-info" routerLink="/clogin" style="margin-left:450px">
+SignIn
+</button>
+<button type="button" class="btn btn-info" routerLink="/cregister"  style="margin-left: 25px;" style="margin-left:25px;">
+  Get Registered
+</button>
+</div>
+ <br/>
+ <br/>
+ <br/>
+
+<div *ngIf="isShown" class="container">
+
+
+  <h4 style="color:orangered;text-align:center"><b>BUS LIST</b></h4>
+    <div  class="jumbotron"><hr/>
+        <table class="table">
+            <thead class="head">
+                <tr>
+                    <th>BusNo</th>
+                    <th>Bus type</th>
+                    <th>Departure Time</th>
+                    <th>Arrival time</th>
+                    <th>Seat Cost</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bus of Buslist">
+                    <td>{{bus.busNo}}</td>
+                    <td>{{bus.typeOfBus}}</td>
+                    <td>{{bus.dTime}}</td>
+                    <td>{{bus.aTime}}</td>
+                    <td>{{bus.seatCost}}</td>
+                    <td></td>
+                    <td>
+                        <a style="color: blue; cursor:pointer;" (click)="onBook(bus.busNo)">Book Now</a>&nbsp;&nbsp;
+                    </td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>

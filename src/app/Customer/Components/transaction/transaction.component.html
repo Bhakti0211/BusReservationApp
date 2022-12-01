@@ -1,0 +1,44 @@
+
+
+<h1>Hello</h1>
+
+
+
+
+
+
+<!-- <br/><br/>
+<div class="container">
+    <div class="jumbotron">
+        <table class="table">
+            <thead class="head">
+                <tr>
+                <th>  TId</th>
+                <th>BusId</th>
+                <th>CustomerId</th>
+                <th>DateOfBooking</th>
+                <th>TotalCost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let detail of tdetails">
+                    <td>{{detail.tId}}</td>
+                    <td>{{detail.busId}}</td>
+                    <td>{{detail.customerId}}</td>
+                    <td>{{detail.dateOfBooking|date:'short'}}</td>
+                    <td>{{detail.totalcost}}</td>
+
+                     <td><div *ngIf="isDateEqual(detail.dateOfBooking); else elseBlock">
+                        <button class="btn btn-danger" ng-click = "onclick();">Cancel</button>
+                     </div>
+                      <ng-template #elseBlock>
+                        <button class="btn btn-danger" [disabled]="true">Cancel</button>&nbsp;&nbsp;
+                        <a routerLink="/feedback">Feedback</a>
+                      </ng-template>
+                    </td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->

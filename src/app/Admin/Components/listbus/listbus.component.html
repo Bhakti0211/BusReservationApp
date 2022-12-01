@@ -1,0 +1,46 @@
+<br/>
+<button type="button" class="btn btn-info" routerLink="/nav/add" style="margin-left:250px;margin-top: 30px;">
+    Add Bus
+</button>
+<button type="button" class="btn btn-info" routerLink="/Adminlogin" style="margin-left:450px;margin-top:30px">
+    Back
+</button>
+<br/><br/><br/>
+
+<!--<button type="button" class="lst"style="color:black;margin-left:80px;margin-top:0px;">Bus List</button>-->
+<div class="container">
+    <div  class="jumbotron"><hr/>
+        <table class="table">
+            <thead class="head">
+                <tr>
+                    <th>BusNo</th>
+                    <th>Bus type</th>
+                    <th>Driver Name</th>
+                    <th>Driver Contact</th>
+                    <th>Departure Time</th>
+                    <th>Arrival time</th>
+                    <th>Seat Cost</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bus of Buslist">
+                    <td>{{bus.busNo}}</td>
+                    <td>{{bus.typeOfBus}}</td>
+                    <td>{{bus.driverName}}</td>
+                    <td>{{bus.driverContact}}</td>
+                    <td>{{bus.dTime}}</td>
+                    <td>{{bus.aTime}}</td>
+                    <td>₹{{bus.seatCost}}</td>
+                    <td></td>
+                    <td>
+                        <a [routerLink]="['/nav/find/',bus.busNo]">Details</a>&nbsp;&nbsp;
+                        <a [routerLink]="['/nav/edit/',bus.busNo]">Edit</a>&nbsp;&nbsp;
+                        <a [routerLink]="['/nav/remove/',bus.busNo]">Remove</a>&nbsp;&nbsp;
+                    </td>
+                </tr> 
+            </tbody>
+        </table>
+    </div>
+</div>

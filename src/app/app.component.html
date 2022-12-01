@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-light "  style="background-color:darkcyan;">
+    <span>
+    <a  (click)="onClick()" routerLink="/searchbus"><button class="btn btn-light" style="margin-left:25px;">PHOENIX TRAVELS <i class='fa fa-bus' style="color:teal"></i></button></a>
+    &nbsp;&nbsp;
+    <a routerLink="/aboutus" style="margin-left:160px;color: aliceblue;text-decoration: none;">About Us</a>
+   
+    <a routerLink="/contact" style="margin-left:160px;color: aliceblue;text-decoration: none;">Contact Us</a>
+    </span>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm style="margin-left:700px">
+        <button type="button" class="btn btn-light" routerLink="/Adminlogin" style="margin-left:10px" >
+          Admin
+        </button>
+        
+      </div>
+    </nav>
+ 
+
+
+
+    <router-outlet></router-outlet>
